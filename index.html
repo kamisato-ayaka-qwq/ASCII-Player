@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口元标签 -->
+    <title>ASCII Player</title>
+    <style media="screen">
+        #stage {
+            line-height: 1px;
+            font-family: monospace;
+            font-size: 8pt;
+            white-space: pre;
+        }
+
+        #control {
+            transition: opacity 0.5s;
+        }
+
+        #control.fade {
+            opacity: 0.2;
+        }
+
+        .neumorphic-btn {
+            border: none;
+            padding: 12px 24px;
+            border-radius: 15px;
+            background: #e0e0e0;
+            box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #babecc;
+            cursor: pointer;
+            outline: none;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+
+        .neumorphic-btn:hover {
+            transform: scale(0.97);
+        }
+
+        .neumorphic-btn:active {
+            box-shadow: inset -3px -3px 10px #ffffff, inset 3px 3px 10px #babecc;
+        }
+
+        #file-selector {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+        }
+
+        #bottom-btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* 为手机进行优化 */
+        @media (max-width: 576px) {
+            .neumorphic-btn {
+                flex: 1 1 100%; /* 占据整个宽度 */
+            }
+        }
+
+        /* 为平板进行优化 */
+        @media (min-width: 577px) and (max-width: 992px) {
+            .neumorphic-btn {
+                flex: 1 1 33%; /* 占据三分之一的宽度 */
+            }
+        }
+
+        /* 默认为电脑样式，按钮水平排列 */
+    </style>
+</head>
+
+<body>
+    <div id="control">
+        <span>Video file: </span>
+        <label for="file-selector" class="neumorphic-btn file-label">上传文件</label>
+        <input id="file-selector" type="file">
+    </div>
+    <div id="stage">
+    </div>
+    <div id="bottom-btn">
+        <button onclick="location.reload();" class="neumorphic-btn">删除</button>
+        <button onclick="pausePlayer();" class="neumorphic-btn">暂停</button>
+        <button onclick="resumePlayer();" class="neumorphic-btn">继续</button>
+    </div>
+    <script src="js/player.js" charset="utf-8"></script>
+</body>
+<footer>
+  <ul>
+    <li><a href="http://ayaka0.top/"><p>Copyright © 2022-2023 kamisatoayaka Powered by ayaka</a></li>
+   
+  </ul>
+</footer>
+</html>
+

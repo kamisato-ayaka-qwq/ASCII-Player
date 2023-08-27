@@ -1,2 +1,7 @@
-# ASCII-Player
-将视频转化为ASCII编码格式
+# Bad Apple!!
+
+## Features
+* Realtime rendering
+* General media formats supports
+
+[Demo](http://www.bilibili.com/video/av4949065/)
