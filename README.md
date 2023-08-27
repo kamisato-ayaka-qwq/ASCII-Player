@@ -1,7 +1,7 @@
-# Bad Apple!!
+#坏苹果！！
 
-## Features
-* Realtime rendering
-* General media formats supports
+##功能
+*实时渲染
+*一般媒体格式支持
 
-[Demo](http://www.bilibili.com/video/av4949065/)
+[演示](https://b23.tv/FxCjrZf)
